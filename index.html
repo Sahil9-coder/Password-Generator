@@ -218,9 +218,23 @@ sahil2309singh@gmail.com
   <div style="background:white; padding:20px; max-width:90%; border-radius:10px; text-align:center;">
     <h2 style="margin-bottom:10px;">Hey!</h2>
     <p style="margin-bottom:20px; font-size:16px;">This is my first website. I have placed some ads to support my work. I know it may slightly disturb your experience, but I have kept them minimal. Please compromise and support me. Thank you!</p>
-    <button onclick="document.getElementById('popup-message').style.display='none';" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">I Support You!</button>
+    <button onclick="closePopup()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">I Support You!</button>
   </div>
 </div>
+
+<!-- This is your popup controlling script -->
+<script>
+  if (localStorage.getItem('popupClosed') !== 'true') {
+    document.getElementById('popup-message').style.display = 'flex';
+  } else {
+    document.getElementById('popup-message').style.display = 'none';
+  }
+
+  function closePopup() {
+    document.getElementById('popup-message').style.display = 'none';
+    localStorage.setItem('popupClosed', 'true');
+  }
+</script>
 
 </body>
 </html>
