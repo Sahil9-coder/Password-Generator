@@ -1,0 +1,2 @@
+google.com, pub-5444334977806689, DIRECT
+another-ad-network.com, pub-1234567890, DIRECT
