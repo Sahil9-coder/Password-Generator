@@ -1,0 +1,327 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  animation: fadeDown 1s ease forwards;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+section {
+  background: #1e3c72;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 850px;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: slideIn 1s ease forwards;
+}
+
+.main-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  background-color: #e0f7fa;
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.checkboxes {
+  margin: 20px 0;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  background: #ff6f00;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  background: #ff9100;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background-color: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: #3a63b8;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.output {
+  margin-top: 30px;
+  background: #112d4e;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  word-break: break-word;
+  animation: fadeUp 1s ease forwards;
+  border-left: 4px solid #4caf50;
+  user-select: all;
+}
+
+.tips-list {
+  margin-top: 15px;
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.ad-section {
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 2px dashed #ccc;
+  text-align: center;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  color: #333;
+}
+
+.ad-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ad-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 18px;
+  color: #444;
+}
+
+/* Adblock Popup */
+#adblock-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: popupFade 0.5s ease forwards;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+  color: #e74c3c;
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Privacy Popup */
+#privacy-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.popup-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #333;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: popupFade 0.5s ease forwards;
+}
+
+.terms-content {
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #444;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.terms-content h3 {
+  margin: 15px 0 10px;
+  color: #4caf50;
+}
+
+.terms-content p {
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideIn {
+  0% {opacity: 0; transform: translateX(-50px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes popupFade {
+  0% { opacity: 0; transform: scale(0.7);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .output {
+    font-size: 1.1rem;
+  }
+}
+
