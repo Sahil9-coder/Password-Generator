@@ -1,4 +1,4 @@
-# Ultimate Password Generator - Future Billionaire
+# Ultimate Password Generator - Sahil
 
 This is a professional-grade password generator web application with enhanced features including adblock detection, custom text integration, and secure password creation.
 
@@ -96,4 +96,4 @@ For any issues with deployment or customization, please feel free to reach out.
 
 ---
 
-© 2025 Future Billionaire. All Rights Reserved.
+© 2025 Sahil.
